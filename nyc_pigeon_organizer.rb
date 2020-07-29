@@ -1,7 +1,9 @@
-require 'pry'
+#organize pigeon data using this. 
+#as we iterate through each key and value, we pry and check which ones 
+#we are defining and then pushing them into our new hash 
 def nyc_pigeon_organizer(data)
   # write your code here!
-  results = data.each_with_object({}) do |(key, value), final_array|
+ data.each_with_object({}) do |(key, value), final_array|
     value.each do |inner_key, names|
       names.each do |name|
         if !final_array[name]
